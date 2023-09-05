@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* Reset default styles for body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Login section styles */
+        .login {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 95%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 150px;
+            z-index: 500;
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: flex-start; /* Horizontally center items */
+        }
+
+        /* Header section styles */
+        .header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 140px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Horizontally center items */
+        }
+
+        /* Navigator section styles */
+        .navigator {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            top: 125px;
+            width: 100%;
+            height: 10px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Horizontally center items */
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px; /* Add space between logo and nav */
+            align-self: flex-start; /* Align the logo to the left */
+            display: inline-block;
+        }
+
+        /* Navigation container styles */
+        .nav-container {
+            display: flex;
+            align-items: center; /* Vertically center nav links */
+            margin-top: 10px; /* Add space between logo and nav-container */
+        }
+
+        /* Navigation list styles */
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Keep nav links in the same line */
+        }
+
+        /* Navigation list item styles */
+        .nav li {
+            margin-right: 20px; /* Add space between nav links */
+        }
+
+        /* Navigation link styles */
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Home section styles */
+        #homeFullScreen {
+            width: 100%;
+            height: 100vh; /* Set the height to 100% of the viewport height */
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: top center;
+            background-image: url('header.png');
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content */
+            align-items: center; /* Horizontally center content */
+            text-align: center;
+        }
+
+        /* Team section styles */
+        #teamfullscreen {
+            width: 100%;
+            height: 100vh; /* Set the height to 100% of the viewport height */
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: top center;
+            background-image: url('teamfull.jpg');
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content */
+            align-items: center; /* Horizontally center content */
+            text-align: center;
+        }
+
+        /* Header text styles */
+        .header-text h1 {
+            font-size: 60px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .header-text p {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        /* Vertical line styles */
+        .header-text .vertical-line {
+            height: 2px;
+            background-color: #fff;
+            width: 150px;
+            margin: 0 auto;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Team Members container styles */
+        .team-container {
+            max-width: 2000px; /* Adjust the max-width as needed */
+            margin: 0 auto;
+            background-color: #555;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .team-container h1 {
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Container row styles */
+        .container-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px; /* Adjust the max-width as needed */
+            margin: 0 auto;
+        }
+
+        /* Individual container styles */
+        .container {
+            flex-basis: calc(33.33% - 20px); /* Adjust the width of each container */
+            margin-bottom: 20px;
+            background-color: #585858;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .container img {
+            max-width: 75%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .container h3 {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .container p {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        /* Hover effect */
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contact section styles */
+        #contact {
+            background-color: #333;
+        }
+
+        /* Contact section paragraph styles */
+        #contact p {
+            color: #fbfbfb;
+            font-size: 50px;
+            padding: 20px 0;
+        }
+
+        /* Contact button styles */
+        .contact-btn {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000000;
+        }
+
+        /* Footer text span styles */
+        footer > span {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* Footer navigation styles */
+        .footer-nav {
+            padding: 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Footer navigation list item styles */
+        .footer-nav li {
+            display: inline;
+            font-weight: 600;
+            padding-right: 20px;
+        }
+
+        /* Footer navigation link styles */
+        .footer-nav a {
+            color: #79797B;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        /* Footer navigation link hover styles */
+        .footer-nav a:hover {
+            color: #fbfbfb;
+        }
+    </style>
+    <script>
+        // Your JavaScript code can go here
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Resume Builders" width="310" height="134" fetchpriority="high" loading="eager" decoding="async">
+        </div>
+    </div>
+
+    <!-- Login Section -->
+    <div class="login">
+        <a href="login.html">
+            <img src="login.png" alt="Resume Builders" width="46" height="68" loading="auto" decoding="async">
+        </a>
+    </div>
+
+    <!-- Navigator Section -->
+    <div class="navigator">
+        <div class="nav-container">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sorry.html">Templates</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div id="homeFullScreen">
+            <div class="header-text">
+                <h1>Resume Builders</h1>
+                <div class="vertical-line"></div>
+                <p>
+                    Our motto is to differentiate your professional image when facing recruiters.
+                </p>
+            </div><!-- End HeaderText -->
+        </div><!-- End homeFullScreen -->
+    </header><!-- End Header -->
+
+    <!-- Team Members container -->
+    <div class="team-container">
+        <h1>Team Members</h1>
+    </div>
+    <div id="teamfullscreen">
+        <!-- Container rows -->
+        <div class="container-row">
+            <!-- Container 1 -->
+            <div class="container">
+                <img src="member1.jpg" alt="Member 1">
+                <h3>Souvik Ruhidas</h3>
+                <p>Made the front end</p>
+            </div>
+
+            <!-- Container 2 -->
+            <div class="container">
+                <img src="member2.jpg" alt="Member 2">
+                <h3>Pramod Ahdav</h3>
+                <p>Doing the backend</p>
+            </div>
+
+            <!-- Container 3 -->
+            <div class="container">
+                <img src="member3.jpg" alt="Member 3">
+                <h3>Yassar Sharif</h3>
+                <p>just here for marks</p>
+            </div>
+            
+            <!-- Container 4 -->
+            <div class="container">
+                <img src="member4.jpg" alt="Member 4">
+                <h3>Daksh Sharma</h3>
+                <p>broo was not even needed in the team</p>
+            </div>
+            
+            <!-- Repeat the structure for additional rows -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center">
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sorry.html">Portfolio</a></li>
+                <li><a href="sorry.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
