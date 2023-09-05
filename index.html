@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builders</title>
+    <style>
+        /* Reset default styles for body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .login {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 95%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 150px;
+            z-index: 500;
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: flex-start; /* Horizontally center items */
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 140px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Horizontally center items */
+        }
+
+
+        .navigator {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            top: 125px;
+            width: 100%;
+            height:10px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Horizontally center items */
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px; /* Add space between logo and nav */
+            align-self: flex-start; /* Align the logo to the left */
+            display: inline-block;
+        }
+
+
+        /* Navigation container */
+        .nav-container {
+            display: flex;
+            align-items: center; /* Vertically center nav links */
+            margin-top: 10px; /* Add space between logo and nav-container */
+        }
+
+        /* Navigation list styles */
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Keep nav links in the same line */
+        }
+
+        /* Navigation list item styles */
+        .nav li {
+            margin-right: 20px; /* Add space between nav links */
+        }
+
+        /* Navigation link styles */
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Parent 2 background image */
+        .parent:nth-of-type(3) {
+            background: #ffffff url("f_image.jpg") no-repeat center center;
+            background-size: cover;
+        }
+
+        /* Parent 3 background image */
+        .parent:nth-of-type(4) {
+            background: #ffffff url("image2.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Last parent background image */
+        .parent:last-of-type {
+            background: #ffffff url("image1.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+
+        /* Shared parent styles */
+        .parent {
+        width: 100%;
+        height: 110vh;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
+        font-family: tahoma;
+        text-align: center;
+        line-height: 180%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        }
+        /* Shared paragraph styles within parent */
+        .parent p {
+            padding: 25px;
+        }
+
+        /* Contact section paragraph */
+        #contact p {
+            color: #fbfbfb;
+            font-size: 50px;
+            padding: 20px 0;
+        }
+
+        /* Contact button styles */
+        .contact-btn {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000000;
+        }
+
+        /* Footer text span styles */
+        footer > span {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* Footer navigation styles */
+        .footer-nav {
+            padding: 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Footer navigation list item styles */
+        .footer-nav li {
+            display: inline;
+            font-weight: 600;
+            padding-right: 20px;
+        }
+
+        /* Footer navigation link styles */
+        .footer-nav a {
+            color: #79797B;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        /* Footer navigation link hover styles */
+        .footer-nav a:hover {
+            color: #fbfbfb;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><img src="logo.png" alt="Resume Builders" width="310" height="134" fetchpriority="high" loading="eager" decoding="async"></div>
+  </div>
+
+  <div class="login">
+    <a href="login.html">
+        <img src="login.png" alt="Resume Builders" width="46" height="68" loading="auto" decoding="async">
+    </a>
+</div>
+  <div class="navigator">
+    <div class="nav-container">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Templates</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    </div>
+  <div class="parent">
+    <div class="parallex">
+      <h1>EASY TO USE</h1>
+      <p style="font-size: 25px;">If you lack web development experience but aspire to create a professional online resume, we're here to assist you.</p>
+    </div>
+  </div>
+  <div class="parent">
+    <div class="parallex">
+      <h1>DIVERSE TEMPLATES AVAILABLE</h1>
+      <p style="font-size: 25px;">A variety of exquisite templates allows for selective customization.</p>
+      <i class="fi fi-rr-rocket-lunch"></i>
+    </div>
+  </div>
+  <footer class="text-center">
+    <div class="footer-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
